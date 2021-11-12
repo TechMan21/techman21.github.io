@@ -48,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h2 {
   text-align: center;
+  color: #9f6441;
 }
 hr {
   height: 3px;
@@ -174,4 +175,10 @@ nav a:hover {
   grid-area: right;
   border-top: 1px solid;
   border-right: 1px solid;
+}
+h3 {
+  color: #4e636a;
+}
+h4 {
+  color: #4e636a;
 }
