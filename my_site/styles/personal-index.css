@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;700&family=M+PLUS+Rounded+1c:wght@300&family=Overlock+SC&display=swap');
 
 header {
     /* background-color: #f7f7ff; */
     display: grid;
     grid-template-columns: 150px auto;
+    background-color: #ffe66d;
 
 }
 nav {
     display: flex;
     justify-content: space-around;
+    
 }
 #heading {
     max-width: 1600px;
@@ -21,39 +24,43 @@ nav {
     justify-self: center;
     align-self: center;
 }
+
 #hero {
     max-width: 1600px;
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+    
+    /* grid-template-columns: 2fr 2fr 2fr; */
     margin-top: auto;
     
 }
 #hero-box {
-    grid-column: 1/4;
-    grid-row: 1/3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
     z-index: -1;
 }
 #hero-img {
     width: 100%;
     margin: 0;
 }
-#gallery{
+/* #gallery{
     grid-row: 2/3;
     grid-column: 1/3;
-}
+} */
 
 nav a {
     text-align:center;
     /* color: #396E94; */
-    color: #396E94; /* for thw nav words to show better with no nav backgorund over hero */ 
+    color: #4e636a; /* for thw nav words to show better with no nav backgorund over hero */ 
     font-size: 25px;
+    font-family:"Arima Madurai";
     text-decoration: none;
     padding: 20px;
     /* 20px padding looks better to me */
 }
 nav a:hover {
-    background-color: #396E94;
-    color: #f7f7ff;
+    background-color: #acece7;
+    color: #9f6441;
 }
 /* #hero {
     max-width: 2000px;
@@ -67,17 +74,115 @@ nav a:hover {
     grid-row: 1/3;
     z-index: -1;
 } */
+main{
+    display:grid;
+    grid-template-columns: 30%, 30%, 30%;
+    grid-template-rows:1fr, 2fr, 2fr, 1fr, 1fr, 1fr, 3fr, 1fr;
+    font-family:"Arima Madurai";
+}
+.bio{
+    display: grid;
+    grid-template-columns: 1fr, 2fr;
+    grid-template-rows: 1fr;
+}
+p{
+    font-family:"Arima Madurai";
+    border:2px solid #4e636a ;
+    max-width: 60%;
+    /* margin-inline: 350px; */
+    /* grid-column: 3/4;
+    grid-row:2/9;
+    order:3; */
+    grid-column: 3/3;
+    grid-row: 1/2;
+    margin:auto;
+    padding: 5px;
+
+}
+
+/* p h2{
+    -ms-grid-row-span:start;
+} */
+#selfie{
+    max-height: 200px;
+    border-radius: 20%;
+    /* margin-inline: 80px; */
+    /* grid-column: 1/3;
+    grid-row: 3/6; */
+    /* order:0;
+    grid-column: 1/4;
+    grid-row: 3/9; */
+    grid-column: 1/3;
+    grid-row: 1/2;
+    padding: 20px;
+    
+}
+h2{
+    text-align: center;
+    margin: auto;
+    max-width: 250px;
+    border-top:2px solid #4e636a ;
+    border-bottom:2px solid #4e636a ;
+    grid-column: 1/3;
+    grid-row: 2/9;
+}
+#g-1, #g-2, #g-3, #g-4, #g-5, #g-6 {
+    max-block-size: 80%;
+    /* max-width: 100%;
+    margin-top: 8px;
+    vertical-align: middle; */
+}
+
+.row {
+    
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 3px;
+    grid-column: 1/4;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 40%;
+    max-width: 30%;
+    max-height: 80%;
+    
+  }
+  
+  .column img {
+    margin-top: 6px;
+    
+    width: 90%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
 
 
 footer {
-    background-color: #f7f7ff;
+    background-color: #9f6441;
     padding: 25px 50px;
-    margin-top: 500px;
+    margin-top: 300px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    grid-column: 1/4;
-    grid-row:4/4 ;
+    grid-column: 1/3;
+    grid-row:8/9 ;
+    max-height: 100px;
+    font-family:"Arima Madurai";
 }
 footer .social img {
     padding-top: 15px;
@@ -93,7 +198,7 @@ footer h3 a:hover {
     text-decoration: underline;
 }
 footer a {
-    color: #396E94;
+    color: #ffe66d;
     text-decoration: none;
 }
 footer a:hover {
