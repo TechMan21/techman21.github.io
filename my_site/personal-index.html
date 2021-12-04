@@ -20,15 +20,15 @@
                 <!-- <a href="site_plan.html"> Site Plan</a> -->
             </nav>
         </header>
+    </div>
         <div id="hero">
             <div id="hero-box">
                 <img id="hero-img" src="images/Sun/IMG_1558.jpg" alt="Sunset with shining rays">
             </div>
+        </div>
 
         <main>
-           <h3></h3>
             <h2>Quick Look Gallery</h2>
-            <h3></h3>
             <div class="row"> 
                 <div class="column">
                     <img id="myImg" class="myImages" src="images/Sun/IMG_1593.jpg" alt="Sunset 1" style="width:100%;max-width:400px"/>
@@ -42,6 +42,7 @@
                     <img id="myImg" class="myImages" src="images/Sun/IMG_6373-t.JPG" alt="Sunset 3" style="width:100%;max-width:400px"/>                
                     <img id="myImg" class="myImages" src="images/Aussie-Nature/20180917_152348.jpeg" alt="Beach 1" style="width:100%;max-width:400px"/>
                 </div>
+                <!-- I know the same ID is used for multiple images-it makes it more efficient for CSS -->
             </div>
             <!-- The Modal -->
             <div id="myModal" class="modal">
@@ -50,7 +51,7 @@
                 <span class="close">&times;</span>
             
                 <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
+                <img class="modal-content" id="img01" src=NONE alt="Validation-req">
 
                 <!-- Modal Caption (Image Text) -->
                 <div id="caption"></div>
@@ -71,35 +72,35 @@
                  </p>
             </div>
             
-            </main>
         </main>
+       
         <script>
-        // create references to the modal...
-        var modal = document.getElementById('myModal');
-        // to all images -- note I'm using a class!
-        var images = document.getElementsByClassName('myImages');
-        // the image in the modal
-        var modalImg = document.getElementById("img01");
-        // and the caption in the modal
-        var captionText = document.getElementById("caption");
+            // create references to the modal...
+            var modal = document.getElementById('myModal');
+            // to all images -- note I'm using a class!
+            var images = document.getElementsByClassName('myImages');
+            // the image in the modal
+            var modalImg = document.getElementById("img01");
+            // and the caption in the modal
+            var captionText = document.getElementById("caption");
 
-        // Go through all of the images with our custom class
-        for (var i = 0; i < images.length; i++) {
-        var img = images[i];
-        // and attach our click listener for this image.
-        img.onclick = function(evt) {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-        }
+            // Go through all of the images with our custom class
+            for (var i = 0; i < images.length; i++) {
+            var img = images[i];
+            // and attach our click listener for this image.
+            img.onclick = function(evt) {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+            }
 
-        var span = document.getElementsByClassName("close")[0];
+            var span = document.getElementsByClassName("close")[0];
 
-        span.onclick = function() {
-        modal.style.display = "none";
-        }
-            </script>
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+        </script>
                 
 
 
@@ -119,6 +120,7 @@
                 <a href="https://instagram.com" target="blank">
                     <img src="images/Media-icons/rsz_instagram_logo.png" alt="instagram icon">            
                 </a>
+            </div>
         </footer>
 </body>
 </html>
