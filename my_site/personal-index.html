@@ -31,18 +31,31 @@
             <h3></h3>
             <div class="row"> 
                 <div class="column">
-                    <img id="g-1" src="images/Sun/IMG_1593.jpg" alt="Sunset 1"/>
-                    <img id="g-2" src="images/Aussie-Nature/20181122_144413.jpeg" alt="Flower 1"/>
+                    <img id="myImg" class="myImages" src="images/Sun/IMG_1593.jpg" alt="Sunset 1" style="width:100%;max-width:400px"/>
+                    <img id="myImg" class="myImages" src="images/Aussie-Nature/20181122_144413.jpeg" alt="Flower 1" style="width:100%;max-width:400px;"/>
                 </div>
                 <div class="column">
-                    <img id="g-3" src="images/Sun/IMG_2367.jpg" alt="Sunset 2"/>
-                    <img id="g-4" src="images/Aussie-Nature/20180907_165404.jpeg" alt="Flower 2"/>
+                    <img id="myImg" class="myImages" src="images/Sun/IMG_2367.jpg" alt="Sunset 2" style="width:100%;max-width:400px"/>
+                    <img id="myImg" class="myImages" src="images/Aussie-Nature/20180907_165404.jpeg" alt="Flower 2" style="width:100%;max-width:400px"/>
                 </div>
                 <div class="column">        
-                    <img id="g-5" src="images/Sun/IMG_6373-t.JPG" alt="Sunset 3"/>                
-                    <img id="g-6" src="images/Aussie-Nature/20180917_152348.jpeg" alt="Beach 1"/>
+                    <img id="myImg" class="myImages" src="images/Sun/IMG_6373-t.JPG" alt="Sunset 3" style="width:100%;max-width:400px"/>                
+                    <img id="myImg" class="myImages" src="images/Aussie-Nature/20180917_152348.jpeg" alt="Beach 1" style="width:100%;max-width:400px"/>
                 </div>
-            </div> 
+            </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+            
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+            </div>
+             
             <div class="bio">
                 <img id="selfie" src="images/D9.jpeg" alt="Photo of DR"/>
                 <p>Hi there! My name is Dillan Rawlings (hence the DR in my logo). I have made this website for all
@@ -60,6 +73,33 @@
             
             </main>
         </main>
+        <script>
+        // create references to the modal...
+        var modal = document.getElementById('myModal');
+        // to all images -- note I'm using a class!
+        var images = document.getElementsByClassName('myImages');
+        // the image in the modal
+        var modalImg = document.getElementById("img01");
+        // and the caption in the modal
+        var captionText = document.getElementById("caption");
+
+        // Go through all of the images with our custom class
+        for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        // and attach our click listener for this image.
+        img.onclick = function(evt) {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+            </script>
                 
 
 
