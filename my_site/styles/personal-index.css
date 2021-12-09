@@ -265,7 +265,7 @@ h2{
 footer {
     background-color: #9f6441;
     padding: 25px 50px;
-    margin-top: 300px;
+    margin-top: 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -497,8 +497,6 @@ h4{
   padding: 20px;
   text-align: center;
   margin-top: 25px;
-  
-
 }
 
 #Nature-gallery {
