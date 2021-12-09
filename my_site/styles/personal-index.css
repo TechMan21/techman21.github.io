@@ -27,7 +27,7 @@ nav {
 
 #hero {
     max-width: 1600px;
-    
+    margin: 0 auto;
     /* grid-template-columns: 2fr 2fr 2fr; */
     margin-top: auto;
     
@@ -41,8 +41,8 @@ nav {
 }
 #hero-img {
     width: 100%;
-    margin: 0;
     max-height: 1200px;
+    
 }
 /* #gallery{
     grid-row: 2/3;
@@ -156,12 +156,13 @@ h2{
     max-width: 30%;
     max-height: 80%;
     text-align: center;
+    margin:0 auto;
+    
     
   }
   
   .column img {
-    margin-top: 6px;
-    
+    margin-top: 6px;    
     width: 90%;
   }
   
@@ -282,6 +283,7 @@ footer .social img {
 } */
 footer h3 {
     color:black;
+    font-size: 18px;
 }
 footer h3 a:hover {
     text-decoration: underline;
@@ -487,7 +489,92 @@ h1{
     content: "X";
   }
 
+/* NATURE PAGE CSS */
+h4{
+  /* border:2px solid #4e636a ; */
+  max-width: 90%;
+  margin:auto;
+  padding: 20px;
+  /* padding-top: 160px; */
+  text-align: center;
+  
 
+}
+
+#Nature-gallery {
+  display: grid;
+  /* height: calc(600vh - 20px); */
+  max-height: (100vh);
+  grid-template: repeat(2, 1fr)/repeat(5, 1fr);
+  grid-gap: 0.5em;
+  margin: 0 auto;
+  
+}
+@media (max-width: 800px) {
+  #Nature-gallery {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #Nature-gallery > div {
+    width: 48%;
+    margin: 1%;
+  }
+}
+@media (max-width: 800px) and (max-width: 350px) {
+  #Nature-gallery > div {
+    width: 98%;
+  }
+}
+#Nature-gallery > div:nth-child(6n+1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+#Nature-gallery > div:nth-child(2) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+#Nature-gallery > div:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+#Nature-gallery > div > a {
+  opacity: 0;
+  position: absolute;
+  color: #000;
+  background-color: #000;
+  font: bold 4em "Helvetica";
+  text-shadow: 0 -1px 5px #fff, -1px 0px 5px #fff, 0 1px 5px #fff, 1px 0px 5px #fff;
+  padding: 2rem;
+  mix-blend-mode: difference;
+  width: 100%;
+  height: 100%;
+  transition: all ease 1s;
+}
+#Nature-gallery > div > img {
+  width: 100%;
+  min-height: 100%;
+  transition: all ease 1s;
+}
+#Nature-gallery > div:hover img {
+  filter: blur(4px);
+}
+#Nature-gallery > div:hover a {
+  opacity: 1;
+}
+#Nature-gallery > div {
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#Nature-gallery div,
+#Nature-gallery a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
 
 
 /* DO NOT CHANGE BELOW */
