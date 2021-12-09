@@ -308,7 +308,7 @@ h1{
       padding: 10px;
   }
   h3{
-    font-size: 10px;
+    font-size: 18px;
     text-align: center;
     padding: 4px;
     
@@ -491,12 +491,12 @@ h1{
 
 /* NATURE PAGE CSS */
 h4{
-  /* border:2px solid #4e636a ; */
+  border:2px solid #4e636a;
   max-width: 90%;
   margin:auto;
   padding: 20px;
-  /* padding-top: 160px; */
   text-align: center;
+  margin-top: 25px;
   
 
 }
